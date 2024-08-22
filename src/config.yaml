@@ -1,7 +1,7 @@
 site:
   name: The Furry Town
   site: 'https://aarondsilva97.github.io'
-  base: '/'
+  base: '/the-furry-town'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
