@@ -1,0 +1,40 @@
+---
+import Image from '~/components/common/Image.astro';
+// Astro component script
+const services = [
+  {
+    title: 'Premium Pet Boarding',
+    description: 'Top-notch care and comfort for your furry friend while you’re away.',
+    imageUrl: '~/assets/images/2.png',
+  },
+  {
+    title: 'Dog and Cat Daycare',
+    description: 'Fun-filled days with plenty of playtime and socialization.',
+    imageUrl: '~/assets/images/3.png',
+  },
+  {
+    title: 'Pet Photoshoots',
+    description: 'Capture beautiful moments with professional pet photography.',
+    imageUrl: '~/assets/images/4.png',
+  },
+  {
+    title: 'Pet Grooming',
+    description: 'Expert grooming to keep your pets looking their best.',
+    imageUrl: '~/assets/images/5.png',
+  },
+];
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+  {
+    services.map((service) => (
+      <div class="bg-white rounded-lg shadow-md overflow-hidden text-center">
+        <Image src={service.imageUrl} alt={service.title} class="w-full aspect-square object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-bold mb-2">{service.title}</h3>
+          <p class="text-gray-600">{service.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
